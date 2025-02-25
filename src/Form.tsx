@@ -20,7 +20,7 @@ const htmlString = `
 <i><em class="italic" style="white-space: pre-wrap;"> Lenders party here</em></i>
 <span style="white-space: pre-wrap;"> to and </span>
 <mark style="white-space: pre-wrap;"><span>Citibank</span></mark>
-<span style="white-space: pre-wrap;">, N.A., as </span>
+<span style="white-space: pre-wrap; color:yellow">, N.A., as </span>
 <span style="background: rgb(208, 2, 27); white-space: pre-wrap;">Administrative Agent  </span>
 <span style="white-space: pre-wrap;">and as Collateral Agent. Capitalized terms used but not defined herein shall have the respective meanings assigned to such terms in the Credit Agreement (as modified hereby).</span></p>
 

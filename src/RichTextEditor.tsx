@@ -18,6 +18,8 @@ import { TableNode, TableCellNode, TableRowNode } from "@lexical/table";
 import { CodeNode, CodeHighlightNode } from "@lexical/code";
 import { ImageNode } from "./nodes/ImageNode";
 import { YoutubeNode } from "./nodes/YoutubeNode";
+import { TextNode } from "lexical";
+import { ExtendedTextNode } from "./nodes/ExtendedTextNode";
 
 interface RichTextEditorProps {
   value: string;
@@ -34,6 +36,12 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = React.memo(
         theme,
         onError: () => {},
         nodes: [
+          ExtendedTextNode,
+          {
+            replace: TextNode,
+            with: (node: TextNode) => new ExtendedTextNode(node.__text),
+            withKlass: ExtendedTextNode,
+          },
           HeadingNode,
           ListNode,
           ListItemNode,
